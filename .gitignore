@@ -1,0 +1,12 @@
+# File macOS inutili
+.DS_Store
+
+# Cartelle di configurazione che non vuoi tracciare
+bpytop/
+neofetch/
+nvim/
+aerospace/
+borders/
+htop/
+iterm2/
+spicetify/
