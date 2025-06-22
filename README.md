@@ -6,6 +6,7 @@ Benvenuto nel repository **Dotfiles**! Questa repository contiene configurazioni
 
 ## Indice
 
+1. []
 1. [Introduzione](#introduzione)
 2. [Requisiti](#requisiti)
 3. [Struttura della Repository](#struttura-della-repository)
@@ -22,6 +23,20 @@ Benvenuto nel repository **Dotfiles**! Questa repository contiene configurazioni
     - [Yabai](#yabai-shortcut)
 7. [Importanza di Yabai e SIP](#importanza-di-yabai-e-sip)
 8. [Contributi](#contributi)
+
+---
+
+## MacOS Rice
+
+![macOS_Rice](https://github.com/user-attachments/assets/33741052-ad90-4385-9514-1e3497baf98a)
+
+## Sketchybar
+
+![sketchybar](https://github.com/user-attachments/assets/51076301-b189-4e0b-b32a-f58413b8487b)
+
+## Video Demo
+
+https://github.com/user-attachments/assets/9c709c4b-daed-48f0-a0d6-f50f9bebb471
 
 ---
 
