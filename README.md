@@ -6,11 +6,11 @@ Benvenuto nel repository **Dotfiles**! Questa repository contiene configurazioni
 
 ## Indice
 
-1. [Antemprime](#anteprime)
+1. [Introduzione](#introduzione)
+2. [Antemprime](#anteprime)
     - [MacOS Rice](#macos-rice)
     - [Sketchybar](#sketchybar)
     - [Video Demo](#video-demo)
-2. [Introduzione](#introduzione)
 3. [Requisiti](#requisiti)
 4. [Struttura della Repository](#struttura-della-repository)
     - [File Principali](#file-principali)
@@ -29,6 +29,12 @@ Benvenuto nel repository **Dotfiles**! Questa repository contiene configurazioni
 
 ---
 
+## Introduzione
+
+Questa repository è progettata per migliorare il workflow su macOS, fornendo strumenti di gestione avanzata per finestre, spazi e barra delle applicazioni. Ogni configurazione è personalizzata per massimizzare la produttività e la coerenza estetica.
+
+---
+
 ## Anteprime
 
 ### MacOS Rice
@@ -42,12 +48,6 @@ Benvenuto nel repository **Dotfiles**! Questa repository contiene configurazioni
 ### Video Demo
 
 https://github.com/user-attachments/assets/9c709c4b-daed-48f0-a0d6-f50f9bebb471
-
----
-
-## Introduzione
-
-Questa repository è progettata per migliorare il workflow su macOS, fornendo strumenti di gestione avanzata per finestre, spazi e barra delle applicazioni. Ogni configurazione è personalizzata per massimizzare la produttività e la coerenza estetica.
 
 ---
 
