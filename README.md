@@ -6,35 +6,40 @@ Benvenuto nel repository **Dotfiles**! Questa repository contiene configurazioni
 
 ## Indice
 
-1. []
-1. [Introduzione](#introduzione)
-2. [Requisiti](#requisiti)
-3. [Struttura della Repository](#struttura-della-repository)
+1. [Antemprime] (#anteprime)
+    - [MacOS Rice] (#macos-rice)
+    - [Sketchybar] (#sketchybar)
+    - [Video Demo] (#video-demo)
+2. [Introduzione](#introduzione)
+3. [Requisiti](#requisiti)
+4. [Struttura della Repository](#struttura-della-repository)
     - [File Principali](#file-principali)
     - [Directory](#directory)
-4. [Configurazioni Dettagliate](#configurazioni-dettagliate)
+5. [Configurazioni Dettagliate](#configurazioni-dettagliate)
     - [SketchyBar](#sketchybar)
     - [SKHD](#skhd)
     - [Yabai](#yabai)
-5. [Script e Automazioni](#script-e-automazioni)
+6. [Script e Automazioni](#script-e-automazioni)
     - [toggle_bar.sh](#toggle_barsh)
-6. [Shortcut Complete](#shortcut-complete)
+7. [Shortcut Complete](#shortcut-complete)
     - [SKHD](#skhd-shortcut)
     - [Yabai](#yabai-shortcut)
-7. [Importanza di Yabai e SIP](#importanza-di-yabai-e-sip)
-8. [Contributi](#contributi)
+8. [Importanza di Yabai e SIP](#importanza-di-yabai-e-sip)
+9. [Contributi](#contributi)
 
 ---
 
-## MacOS Rice
+## Anteprime
+
+### MacOS Rice
 
 ![macOS_Rice](https://github.com/user-attachments/assets/33741052-ad90-4385-9514-1e3497baf98a)
 
-## Sketchybar
+### Sketchybar
 
 ![sketchybar](https://github.com/user-attachments/assets/51076301-b189-4e0b-b32a-f58413b8487b)
 
-## Video Demo
+### Video Demo
 
 https://github.com/user-attachments/assets/9c709c4b-daed-48f0-a0d6-f50f9bebb471
 
