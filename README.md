@@ -1,6 +1,6 @@
 # Dotfiles
 
-Benvenuto nel repository **Dotfiles**! Questa repository contiene configurazioni personali per macOS, con setup per **iTerm2**, **SketchyBar**, **SKHD**, **Yabai** e altri strumenti utili. L'obiettivo principale è creare un ambiente organizzato, produttivo e esteticamente gradevole per il tuo sistema.
+Benvenuto nel repository **Dotfiles**! Questa repository contiene configurazioni personali per macOS, con setup per **SketchyBar**, **SKHD**, **Yabai** e altri strumenti utili. L'obiettivo principale è creare un ambiente organizzato, produttivo e esteticamente gradevole per il tuo sistema.
 
 ---
 
@@ -68,10 +68,6 @@ https://github.com/user-attachments/assets/9c709c4b-daed-48f0-a0d6-f50f9bebb471
 - **README.md**: Questa documentazione.
 
 ### Directory
-
-#### `iterm2`
-Contiene configurazioni per iTerm2, il terminale avanzato per macOS. File presente:
-- **AppSupport**: Link simbolico per supporto applicativo.
 
 #### `sketchybar`
 Configurazioni per SketchyBar, una barra delle applicazioni personalizzabile. File e directory:
