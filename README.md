@@ -6,10 +6,10 @@ Benvenuto nel repository **Dotfiles**! Questa repository contiene configurazioni
 
 ## Indice
 
-1. [Antemprime] (#anteprime)
-    - [MacOS Rice] (#macos-rice)
-    - [Sketchybar] (#sketchybar)
-    - [Video Demo] (#video-demo)
+1. [Antemprime](#anteprime)
+    - [MacOS Rice](#macos-rice)
+    - [Sketchybar](#sketchybar)
+    - [Video Demo](#video-demo)
 2. [Introduzione](#introduzione)
 3. [Requisiti](#requisiti)
 4. [Struttura della Repository](#struttura-della-repository)
