@@ -1,0 +1,50 @@
+#!/bin/bash
+
+# Aspetta che i servizi siano pronti (necessario per le assegnazioni iniziali)
+yabai --wait-for-services
+
+# Nasconde totalmente la menu bar di macos
+sketchybar --bar topmost=on
+yabai -m config menubar_opacity 0.0
+
+# Layout di default (bsp, stack, float)
+yabai -m config layout bsp
+
+# Quando si crea una nuova finestra: va a destra se split verticale, sotto se orizzontale
+yabai -m config window_placement second_child
+
+# Padding e gap
+yabai -m config top_padding 8
+yabai -m config bottom_padding 8
+yabai -m config left_padding 8
+yabai -m config right_padding 8
+yabai -m config window_gap 8
+
+bash -c "~/.config/skhd/toggle_bar.sh"
+
+# Comportamento mouse
+yabai -m config mouse_follows_focus on
+yabai -m config mouse_modifier alt
+yabai -m config mouse_action1 move
+yabai -m config mouse_action2 resize
+
+# Quando una finestra viene rilasciata al centro di un'altra: scambia (swap)
+yabai -m mouse_drop_action swap
+
+yabai -m config focus_follows_mouse autofocus
+
+# Finestra attiva evidenziata con bordo (opzionale)
+yabai -m config border_width 2
+yabai -m config active_window_border_color 0xff5ac8fa
+yabai -m config normal_window_border_color 0xff3c3c3c
+
+# Regole: app da non gestire (floating)
+yabai -m rule --add app="^System Settings$" manage=off
+yabai -m rule --add app="^Calculator$" manage=off
+yabai -m rule --add app="^Karabiner-Elements$" manage=off
+yabai -m rule --add app="^Monitoraggio Attività$" manage=off
+
+# (Facoltativo) Assegna spazi a un secondo display se ne usi più di uno
+# sleep 2
+# yabai -m space 4 --display 2
+# yabai -m space 5 --display 2

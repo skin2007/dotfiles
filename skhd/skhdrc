@@ -1,0 +1,80 @@
+# ────────── FOCUS TRA FINESTRE ──────────
+alt - j : yabai -m window --focus south
+alt - k : yabai -m window --focus north
+alt - h : yabai -m window --focus west
+alt - l : yabai -m window --focus east
+
+# ────────── SWAP TRA FINESTRE ──────────
+shift + alt - j : yabai -m window --swap south
+shift + alt - k : yabai -m window --swap north
+shift + alt - h : yabai -m window --swap west
+shift + alt - l : yabai -m window --swap east
+
+# ────────── SPOSTAMENTO FINESTRE (WARP) ──────────
+ctrl + alt - j : yabai -m window --warp south
+ctrl + alt - k : yabai -m window --warp north
+ctrl + alt - h : yabai -m window --warp west
+ctrl + alt - l : yabai -m window --warp east
+
+# ────────── AZIONI SU LAYOUT ──────────
+shift + alt - e : yabai -m space --balance             # bilancia layout
+shift + alt - r : yabai -m space --rotate 270  # ruota layout (clockwise)
+shift + alt - y : yabai -m space --mirror y-axis
+shift + alt - x : yabai -m space --mirror x-axis
+
+# ────────── FLOAT, ZOOM, MAXIMIZE ──────────
+alt - s : yabai -m window --toggle float --grid 4:4:1:1:2:2
+alt - f : yabai -m window --toggle zoom-fullscreen
+
+# ────────── CAMBIA SPAZIO ATTIVO ──────────
+alt - 1 : current_spaces=$(yabai -m query --spaces | jq '. | length'); while [[ $current_spaces -lt 1 ]]; do yabai -m space --create; current_spaces=$((current_spaces + 1)); done; yabai -m space --focus 1 ; sleep 0.1; focused=$(yabai -m query --spaces --space | jq '.index'); yabai -m query --spaces | jq -r --argjson focused "$focused" '.[] | select(.windows == [] and .type == "bsp" and .index != $focused) | .index' | sort -nr | while read -r idx; do yabai -m space --destroy "$idx"; done
+alt - 2 : current_spaces=$(yabai -m query --spaces | jq '. | length'); while [[ $current_spaces -lt 2 ]]; do yabai -m space --create; current_spaces=$((current_spaces + 1)); done; yabai -m space --focus 2 ; sleep 0.1; focused=$(yabai -m query --spaces --space | jq '.index'); yabai -m query --spaces | jq -r --argjson focused "$focused" '.[] | select(.windows == [] and .type == "bsp" and .index != $focused) | .index' | sort -nr | while read -r idx; do yabai -m space --destroy "$idx"; done
+alt - 3 : current_spaces=$(yabai -m query --spaces | jq '. | length'); while [[ $current_spaces -lt 3 ]]; do yabai -m space --create; current_spaces=$((current_spaces + 1)); done; yabai -m space --focus 3 ; sleep 0.1; focused=$(yabai -m query --spaces --space | jq '.index'); yabai -m query --spaces | jq -r --argjson focused "$focused" '.[] | select(.windows == [] and .type == "bsp" and .index != $focused) | .index' | sort -nr | while read -r idx; do yabai -m space --destroy "$idx"; done
+alt - 4 : current_spaces=$(yabai -m query --spaces | jq '. | length'); while [[ $current_spaces -lt 4 ]]; do yabai -m space --create; current_spaces=$((current_spaces + 1)); done; yabai -m space --focus 4 ; sleep 0.1; focused=$(yabai -m query --spaces --space | jq '.index'); yabai -m query --spaces | jq -r --argjson focused "$focused" '.[] | select(.windows == [] and .type == "bsp" and .index != $focused) | .index' | sort -nr | while read -r idx; do yabai -m space --destroy "$idx"; done
+alt - 5 : current_spaces=$(yabai -m query --spaces | jq '. | length'); while [[ $current_spaces -lt 5 ]]; do yabai -m space --create; current_spaces=$((current_spaces + 1)); done; yabai -m space --focus 5 ; sleep 0.1; focused=$(yabai -m query --spaces --space | jq '.index'); yabai -m query --spaces | jq -r --argjson focused "$focused" '.[] | select(.windows == [] and .type == "bsp" and .index != $focused) | .index' | sort -nr | while read -r idx; do yabai -m space --destroy "$idx"; done
+alt - 6 : current_spaces=$(yabai -m query --spaces | jq '. | length'); while [[ $current_spaces -lt 6 ]]; do yabai -m space --create; current_spaces=$((current_spaces + 1)); done; yabai -m space --focus 6 ; sleep 0.1; focused=$(yabai -m query --spaces --space | jq '.index'); yabai -m query --spaces | jq -r --argjson focused "$focused" '.[] | select(.windows == [] and .type == "bsp" and .index != $focused) | .index' | sort -nr | while read -r idx; do yabai -m space --destroy "$idx"; done
+alt - 7 : current_spaces=$(yabai -m query --spaces | jq '. | length'); while [[ $current_spaces -lt 7 ]]; do yabai -m space --create; current_spaces=$((current_spaces + 1)); done; yabai -m space --focus 7 ; sleep 0.1; focused=$(yabai -m query --spaces --space | jq '.index'); yabai -m query --spaces | jq -r --argjson focused "$focused" '.[] | select(.windows == [] and .type == "bsp" and .index != $focused) | .index' | sort -nr | while read -r idx; do yabai -m space --destroy "$idx"; done
+alt - 8 : current_spaces=$(yabai -m query --spaces | jq '. | length'); while [[ $current_spaces -lt 8 ]]; do yabai -m space --create; current_spaces=$((current_spaces + 1)); done; yabai -m space --focus 8 ; sleep 0.1; focused=$(yabai -m query --spaces --space | jq '.index'); yabai -m query --spaces | jq -r --argjson focused "$focused" '.[] | select(.windows == [] and .type == "bsp" and .index != $focused) | .index' | sort -nr | while read -r idx; do yabai -m space --destroy "$idx"; done
+alt - 9 : current_spaces=$(yabai -m query --spaces | jq '. | length'); while [[ $current_spaces -lt 9 ]]; do yabai -m space --create; current_spaces=$((current_spaces + 1)); done; yabai -m space --focus 9 ; sleep 0.1; focused=$(yabai -m query --spaces --space | jq '.index'); yabai -m query --spaces | jq -r --argjson focused "$focused" '.[] | select(.windows == [] and .type == "bsp" and .index != $focused) | .index' | sort -nr | while read -r idx; do yabai -m space --destroy "$idx"; done
+alt - 0 : current_spaces=$(yabai -m query --spaces | jq '. | length'); while [[ $current_spaces -lt 10 ]]; do yabai -m space --create; current_spaces=$((current_spaces + 1)); done; yabai -m space --focus 10; sleep 0.1;  focused=$(yabai -m query --spaces --space | jq '.index'); yabai -m query --spaces | jq -r --argjson focused "$focused" '.[] | select(.windows == [] and .type == "bsp" and .index != $focused) | .index' | sort -nr | while read -r idx; do yabai -m space --destroy "$idx"; done
+
+alt - tab : yabai -m space --focus recent; sleep 0.1; focused=$(yabai -m query --spaces --space | jq '.index'); yabai -m query --spaces | jq -r --argjson focused "$focused" '.[] | select(.windows == [] and .type == "bsp" and .index != $focused) | .index' | sort -nr | while read -r idx; do yabai -m space --destroy "$idx"; done
+
+
+# ────────── SPOSTA FINESTRA TRA SPAZI ──────────
+shift + alt - 1 : current_spaces=$(yabai -m query --spaces | jq '. | length'); while [[ $current_spaces -lt 1 ]]; do yabai -m space --create; current_spaces=$((current_spaces + 1)); done; yabai -m window --space 1; yabai -m space --focus 1 ; sleep 0.1; focused=$(yabai -m query --spaces --space | jq '.index'); yabai -m query --spaces | jq -r --argjson focused "$focused" '.[] | select(.windows == [] and .type == "bsp" and .index != $focused) | .index' | sort -nr | while read -r idx; do yabai -m space --destroy "$idx"; done
+shift + alt - 2 : current_spaces=$(yabai -m query --spaces | jq '. | length'); while [[ $current_spaces -lt 2 ]]; do yabai -m space --create; current_spaces=$((current_spaces + 1)); done; yabai -m window --space 2; yabai -m space --focus 2; sleep 0.1; focused=$(yabai -m query --spaces --space | jq '.index'); yabai -m query --spaces | jq -r --argjson focused "$focused" '.[] | select(.windows == [] and .type == "bsp" and .index != $focused) | .index' | sort -nr | while read -r idx; do yabai -m space --destroy "$idx"; done
+shift + alt - 3 : current_spaces=$(yabai -m query --spaces | jq '. | length'); while [[ $current_spaces -lt 3 ]]; do yabai -m space --create; current_spaces=$((current_spaces + 1)); done; yabai -m window --space 3; yabai -m space --focus 3; sleep 0.1; focused=$(yabai -m query --spaces --space | jq '.index'); yabai -m query --spaces | jq -r --argjson focused "$focused" '.[] | select(.windows == [] and .type == "bsp" and .index != $focused) | .index' | sort -nr | while read -r idx; do yabai -m space --destroy "$idx"; done
+shift + alt - 4 : current_spaces=$(yabai -m query --spaces | jq '. | length'); while [[ $current_spaces -lt 4 ]]; do yabai -m space --create; current_spaces=$((current_spaces + 1)); done; yabai -m window --space 4; yabai -m space --focus 4; sleep 0.1; focused=$(yabai -m query --spaces --space | jq '.index'); yabai -m query --spaces | jq -r --argjson focused "$focused" '.[] | select(.windows == [] and .type == "bsp" and .index != $focused) | .index' | sort -nr | while read -r idx; do yabai -m space --destroy "$idx"; done
+shift + alt - 5 : current_spaces=$(yabai -m query --spaces | jq '. | length'); while [[ $current_spaces -lt 5 ]]; do yabai -m space --create; current_spaces=$((current_spaces + 1)); done; yabai -m window --space 5; yabai -m space --focus 5; sleep 0.1; focused=$(yabai -m query --spaces --space | jq '.index'); yabai -m query --spaces | jq -r --argjson focused "$focused" '.[] | select(.windows == [] and .type == "bsp" and .index != $focused) | .index' | sort -nr | while read -r idx; do yabai -m space --destroy "$idx"; done
+shift + alt - 6 : current_spaces=$(yabai -m query --spaces | jq '. | length'); while [[ $current_spaces -lt 6 ]]; do yabai -m space --create; current_spaces=$((current_spaces + 1)); done; yabai -m window --space 6; yabai -m space --focus 6; sleep 0.1; focused=$(yabai -m query --spaces --space | jq '.index'); yabai -m query --spaces | jq -r --argjson focused "$focused" '.[] | select(.windows == [] and .type == "bsp" and .index != $focused) | .index' | sort -nr | while read -r idx; do yabai -m space --destroy "$idx"; done
+shift + alt - 7 : current_spaces=$(yabai -m query --spaces | jq '. | length'); while [[ $current_spaces -lt 7 ]]; do yabai -m space --create; current_spaces=$((current_spaces + 1)); done; yabai -m window --space 7; yabai -m space --focus 7; sleep 0.1; focused=$(yabai -m query --spaces --space | jq '.index'); yabai -m query --spaces | jq -r --argjson focused "$focused" '.[] | select(.windows == [] and .type == "bsp" and .index != $focused) | .index' | sort -nr | while read -r idx; do yabai -m space --destroy "$idx"; done
+shift + alt - 8 : current_spaces=$(yabai -m query --spaces | jq '. | length'); while [[ $current_spaces -lt 8 ]]; do yabai -m space --create; current_spaces=$((current_spaces + 1)); done; yabai -m window --space 8; yabai -m space --focus 8; sleep 0.1; focused=$(yabai -m query --spaces --space | jq '.index'); yabai -m query --spaces | jq -r --argjson focused "$focused" '.[] | select(.windows == [] and .type == "bsp" and .index != $focused) | .index' | sort -nr | while read -r idx; do yabai -m space --destroy "$idx"; done
+shift + alt - 9 : current_spaces=$(yabai -m query --spaces | jq '. | length'); while [[ $current_spaces -lt 9 ]]; do yabai -m space --create; current_spaces=$((current_spaces + 1)); done; yabai -m window --space 9; yabai -m space --focus 9; sleep 0.1; focused=$(yabai -m query --spaces --space | jq '.index'); yabai -m query --spaces | jq -r --argjson focused "$focused" '.[] | select(.windows == [] and .type == "bsp" and .index != $focused) | .index' | sort -nr | while read -r idx; do yabai -m space --destroy "$idx"; done
+shift + alt - 0 : current_spaces=$(yabai -m query --spaces | jq '. | length'); while [[ $current_spaces -lt 10 ]]; do yabai -m space --create; current_spaces=$((current_spaces + 1)); done; yabai -m window --space 10; yabai -m space --focus 10; sleep 0.1; focused=$(yabai -m query --spaces --space | jq '.index'); yabai -m query --spaces | jq -r --argjson focused "$focused" '.[] | select(.windows == [] and .type == "bsp" and .index != $focused) | .index' | sort -nr | while read -r idx; do yabai -m space --destroy "$idx"; done
+
+# ────────── SPOSTA FINESTRA SU SPAZIO PREV/NEXT ──────────
+shift + alt - p : yabai -m window --space prev
+shift + alt - n : yabai -m window --space next
+
+# ────────── ELIMINA GLI SPAZI SENZA APPLICAZIONI ──────────
+#alt - backspace : yabai -m query --spaces | jq -r '.[] | select(.windows == [] and .type == "bsp") | .index' | sort -nr | while read -r idx; do yabai -m space --destroy "$idx"; done
+alt - backspace : focused=$(yabai -m query --spaces --space | jq '.index'); yabai -m query --spaces | jq -r --argjson focused "$focused" '.[] | select(.windows == [] and .type == "bsp" and .index != $focused) | .index' | sort -nr | while read -r idx; do yabai -m space --destroy "$idx"; done
+
+# ────────── NASCONDI/RIVELA MENU BAR ──────────
+alt - q: bash -c "~/.config/skhd/toggle_bar.sh"
+#alt - q: sketchybar --bar hidden=off; yabai -m config menubar_opacity 0.0; yabai -m config external_bar all:15:0
+#alt - w: sketchybar --bar hidden=on; yabai -m config menubar_opacity 1.0; yabai -m config external_bar all:0:0
+
+# ------- METTI LA SKETCHYBAR SOTTO LA MENU BAR ----------
+#alt - a: sketchybar --bar topmost=on
+
+# ────────── GESTIONE YABAI ──────────
+ctrl + alt - q : yabai --stop-service
+ctrl + alt - s : yabai --start-service
+ctrl + alt - r : yabai --restart-service
+
+# INFORMAZIONI IMPORTANTI, eseguire nel terminale per gestione space
+# sudo yabai --load-sa
+# scripting addition
+
