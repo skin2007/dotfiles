@@ -1,324 +1,206 @@
 # Dotfiles
 
-Personal configuration files for macOS, featuring setups for **nvim**, **yabai**, **skhd**, **sketchybar**, **iTerm2**, and **bpytop**. These dotfiles focus on creating a clean and efficient tiling window manager environment with custom borders and keybindings.
+Benvenuto nel repository **Dotfiles**! Questa repository contiene configurazioni personali per macOS, con setup per **iTerm2**, **SketchyBar**, **SKHD**, **Yabai** e altri strumenti utili. L'obiettivo principale è creare un ambiente organizzato, produttivo e esteticamente gradevole per il tuo sistema.
 
 ---
 
-## Table of Contents
-1. [macOS Rice](#macos-rice)
-2. [SketchyBar + Yabai (Video Demo)](#sketchybar--yabai-video-demo)
-3. [SketchyBar](#sketchybar)
-4. [SKHD Configuration for Yabai and SketchyBar](#skhd-configuration-for-yabai-and-sketchybar)
-   - [Shortcuts and Actions](#shortcuts-and-actions)
-     - [Window Focus](#window-focus)
-     - [Window Swap](#window-swap)
-     - [Window Movement (Warp)](#window-movement-warp)
-     - [Layout Actions](#layout-actions)
-     - [Float, Zoom, Maximize](#float-zoom-maximize)
-     - [Switch Active Space](#switch-active-space)
-     - [Move Window Between Spaces](#move-window-between-spaces)
-     - [Move Window to Previous or Next Space](#move-window-to-previous-or-next-space)
-     - [Remove Empty Spaces](#remove-empty-spaces)
-     - [SketchyBar and Menu Bar Management](#sketchybar-and-menu-bar-management)
-     - [Yabai Management](#yabai-management)
-   - [Important Information](#important-information)
-5. [Technical Details](#technical-details)
-   - [Dynamic Monitor Configuration](#dynamic-monitor-configuration)
-     - [Features](#features)
-     - [Script Location](#script-location)
-     - [Shortcut Example](#shortcut-example)
-     - [Automation with launchd](#automation-with-launchd)
-     - [Limitations](#limitations)
-     - [Logs](#logs)
-     - [Contribution](#contribution)
-6. [Configuration of Yabai and SketchyBar](#configuration-of-yabai-and-sketchybar)
-   - [Configured Actions](#configured-actions)
-     - [General Settings](#general-settings)
-     - [Window Layout and Placement](#window-layout-and-placement)
-     - [Padding and Gap](#padding-and-gap)
-     - [Mouse Behavior](#mouse-behavior)
-     - [Window Borders](#window-borders)
-     - [Application Rules](#application-rules)
-     - [Space-Specific Layouts](#space-specific-layouts)
-     - [Multi-Display Configurations (Optional)](#multi-display-configurations-optional)
-   - [Contribution](#contribution)
+## Indice
+
+1. [Introduzione](#introduzione)
+2. [Requisiti](#requisiti)
+3. [Struttura della Repository](#struttura-della-repository)
+    - [File Principali](#file-principali)
+    - [Directory](#directory)
+4. [Configurazioni Dettagliate](#configurazioni-dettagliate)
+    - [SketchyBar](#sketchybar)
+    - [SKHD](#skhd)
+    - [Yabai](#yabai)
+5. [Script e Automazioni](#script-e-automazioni)
+    - [toggle_bar.sh](#toggle_barsh)
+6. [Shortcut Complete](#shortcut-complete)
+    - [SKHD](#skhd-shortcut)
+    - [Yabai](#yabai-shortcut)
+7. [Importanza di Yabai e SIP](#importanza-di-yabai-e-sip)
+8. [Contributi](#contributi)
 
 ---
 
-## macOS Rice
+## Introduzione
 
-![macOS Rice](https://github.com/user-attachments/assets/a4b4907c-e1ec-4f86-b2e2-8f355b2ea717)
-
----
-
-## SketchyBar + Yabai (Video Demo)
-
-[Watch the Demo](https://github.com/user-attachments/assets/22449e05-7ebf-4952-80b2-0c8137b8fd95)
+Questa repository è progettata per migliorare il workflow su macOS, fornendo strumenti di gestione avanzata per finestre, spazi e barra delle applicazioni. Ogni configurazione è personalizzata per massimizzare la produttività e la coerenza estetica.
 
 ---
 
-## SketchyBar
+## Requisiti
 
-![SketchyBar](https://github.com/user-attachments/assets/39455d80-4555-4140-847b-f21c756b6ca8)
+- macOS
+- Permessi sudo per alcune configurazioni (ad esempio, Yabai)
+- Homebrew per installare le dipendenze necessarie
+- Familiarità con terminale e script bash
 
 ---
 
-## SKHD Configuration for Yabai and SketchyBar
+## Struttura della Repository
 
-The `SKHDRC` file outlines the advanced configuration of **SKHD** for managing **Yabai** and **SketchyBar**, using custom keybindings to control windows, spaces, and layouts.
+### File Principali
 
-### Shortcuts and Actions
+- **LICENSE**: Licenza associata al progetto.
+- **README.md**: Questa documentazione.
 
-#### Window Focus
-| Shortcut   | Action                              |
-|------------|-------------------------------------|
-| `alt - j`  | Focus on the window below           |
-| `alt - k`  | Focus on the window above           |
-| `alt - h`  | Focus on the window to the left     |
-| `alt - l`  | Focus on the window to the right    |
+### Directory
 
-#### Window Swap
-| Shortcut           | Action                              |
-|--------------------|-------------------------------------|
-| `shift + alt - j`  | Swap with the window below          |
-| `shift + alt - k`  | Swap with the window above          |
-| `shift + alt - h`  | Swap with the window to the left    |
-| `shift + alt - l`  | Swap with the window to the right   |
+#### `iterm2`
+Contiene configurazioni per iTerm2, il terminale avanzato per macOS. File presente:
+- **AppSupport**: Link simbolico per supporto applicativo.
 
-#### Window Movement (Warp)
-| Shortcut           | Action                              |
-|--------------------|-------------------------------------|
-| `ctrl + alt - j`   | Move window down                   |
-| `ctrl + alt - k`   | Move window up                     |
-| `ctrl + alt - h`   | Move window left                   |
-| `ctrl + alt - l`   | Move window right                  |
+#### `sketchybar`
+Configurazioni per SketchyBar, una barra delle applicazioni personalizzabile. File e directory:
+- **plugins/**: Directory contenente plugin personalizzati.
+- **sketchybarrc**: File principale per configurare la barra.
 
-#### Layout Actions
-| Shortcut           | Action                              |
-|--------------------|-------------------------------------|
-| `shift + alt - e`  | Balance the layout                 |
-| `shift + alt - r`  | Rotate layout (270°, clockwise)    |
-| `shift + alt - y`  | Mirror layout across the Y-axis    |
-| `shift + alt - x`  | Mirror layout across the X-axis    |
+#### `skhd`
+Configurazioni per SKHD, un gestore di shortcut per macOS. File presenti:
+- **skhdrc**: File di configurazione principale per shortcut personalizzati.
+- **toggle_bar.sh**: Script per gestire la barra delle applicazioni.
 
-#### Float, Zoom, Maximize
-| Shortcut   | Action                              |
-|------------|-------------------------------------|
-| `alt - s`  | Toggle float with center grid       |
-| `alt - f`  | Toggle fullscreen                   |
+#### `yabai`
+Configurazioni per Yabai, un gestore avanzato di finestre per macOS. File presente:
+- **yabairc**: File di configurazione principale.
 
-#### Switch Active Space
-| Shortcut   | Action                              |
-|------------|-------------------------------------|
-| `alt - 1`  | Create and/or focus on space 1      |
-| `alt - 2`  | Create and/or focus on space 2      |
-| `alt - 3`  | Create and/or focus on space 3      |
-| `alt - 4`  | Create and/or focus on space 4      |
-| `alt - ...`| Repeat for spaces up to 10          |
-| `alt - tab`| Focus on the most recent space      |
+---
 
-#### Move Window Between Spaces
-| Shortcut           | Action                              |
-|--------------------|-------------------------------------|
-| `shift + alt - 1`  | Move window to space 1             |
-| `shift + alt - 2`  | Move window to space 2             |
-| `shift + alt - ...`| Repeat for spaces up to 10         |
+## Configurazioni Dettagliate
 
-#### Move Window to Previous or Next Space
-| Shortcut           | Action                              |
-|--------------------|-------------------------------------|
-| `shift + alt - p`  | Move window to the previous space   |
-| `shift + alt - n`  | Move window to the next space       |
+### SketchyBar
 
-#### Remove Empty Spaces
-| Shortcut         | Action                              |
-|------------------|-------------------------------------|
-| `alt - backspace`| Remove unfocused empty spaces       |
+Il file `sketchybarrc` configura la barra delle applicazioni, includendo:
+- Layout personalizzato
+- Icone e shortcut per applicazioni
+- Temi e colori
 
-#### SketchyBar and Menu Bar Management
-| Shortcut          | Action                              |
-|-------------------|-------------------------------------|
-| `alt - q`         | Toggle bar with dynamic configuration |
+### SKHD
 
-#### Yabai Management
-| Shortcut           | Action                              |
-|--------------------|-------------------------------------|
-| `ctrl + alt - q`   | Stop Yabai service                 |
-| `ctrl + alt - s`   | Start Yabai service                |
-| `ctrl + alt - r`   | Restart Yabai service              |
+Il file `skhdrc` offre una serie di shortcut per gestire finestre, spazi e la barra delle applicazioni. Include anche keybinding per lo script `toggle_bar.sh`.
 
-### Important Information
-To ensure Yabai works properly, execute:
+### Yabai
+
+Il file `yabairc` configura Yabai per:
+- Layout bsp (Binary Space Partitioning)
+- Gestione di finestre galleggianti
+- Configurazioni specifiche per monitor multipli
+- Nascondere completamente la barra dei menu di macOS:
+  ```bash
+  yabai -m config menubar_opacity 0.0
+  ```
+
+---
+
+## Script e Automazioni
+
+### `toggle_bar.sh`
+
+Lo script `toggle_bar.sh` automatizza la gestione dinamica della barra delle applicazioni in base al monitor attivo. Funzionamento dettagliato:
+
+1. **Gestione dello stato corrente**:
+   - Lo script utilizza un file chiamato `bar_state` per memorizzare lo stato corrente della barra (visibile o nascosta).
+   - Se il file non esiste, viene creato e inizializzato con lo stato "visible".
+
+2. **Rilevamento del display attivo**:
+   - Lo script utilizza il comando `yabai -m query --displays` per ottenere informazioni sui display.
+   - Identifica il display attivo basandosi sugli spazi che contengono finestre aperte.
+
+3. **Alternanza della barra**:
+   - **Se la barra è nascosta**:
+     - La barra viene resa visibile con `sketchybar --bar hidden=off`.
+     - La trasparenza della barra dei menu di macOS viene impostata a `0.0` (completamente nascosta).
+     - Configura Yabai per il display attivo:
+       - **Monitor interno**: Disattiva la barra esterna (`external_bar all:0:0`).
+       - **Monitor esterno**: Attiva la barra esterna con margine (`external_bar all:15:0`).
+   - **Se la barra è visibile**:
+     - La barra viene nascosta con `sketchybar --bar hidden=on`.
+     - La trasparenza della barra dei menu di macOS viene impostata a `1.0` (completamente visibile).
+     - Disattiva la configurazione della barra esterna di Yabai (`external_bar all:0:0`).
+
+Esecuzione manuale dello script:
+```bash
+./toggle_bar.sh
+```
+
+---
+
+## Shortcut Complete
+
+### SKHD Shortcut
+
+#### Focus finestre
+```plaintext
+alt - j  : Focus sulla finestra sotto
+alt - k  : Focus sulla finestra sopra
+alt - h  : Focus sulla finestra a sinistra
+alt - l  : Focus sulla finestra a destra
+```
+
+#### Scambio finestre
+```plaintext
+shift + alt - j  : Scambia con la finestra sotto
+shift + alt - k  : Scambia con la finestra sopra
+shift + alt - h  : Scambia con la finestra a sinistra
+shift + alt - l  : Scambia con la finestra a destra
+```
+
+#### Movimento finestre
+```plaintext
+ctrl + alt - j   : Sposta finestra sotto
+ctrl + alt - k   : Sposta finestra sopra
+ctrl + alt - h   : Sposta finestra a sinistra
+ctrl + alt - l   : Sposta finestra a destra
+```
+
+#### Gestione barra delle applicazioni
+```plaintext
+alt - q  : Toggle della barra
+```
+
+#### Gestione Yabai
+```plaintext
+ctrl + alt - q   : Stop servizio Yabai
+ctrl + alt - s   : Start servizio Yabai
+ctrl + alt - r   : Restart servizio Yabai
+```
+
+### Yabai Shortcut
+
+#### Layout e finestre
+```plaintext
+alt - s  : Toggle float e centramento
+alt - f  : Toggle fullscreen
+```
+
+#### Spazi e finestre
+```plaintext
+alt - 1  : Focus sullo spazio 1
+alt - 2  : Focus sullo spazio 2
+shift + alt - 1 : Sposta finestra nello spazio 1
+shift + alt - 2 : Sposta finestra nello spazio 2
+```
+
+---
+
+## Importanza di Yabai e SIP
+
+Per utilizzare **Yabai** con il supporto completo agli spazi e alle finestre, è necessario disattivare parzialmente il **SIP** (System Integrity Protection). Dopo averlo disattivato, esegui:
 ```bash
 sudo yabai --load-sa
 ```
 
-These shortcuts are designed to optimize dynamic space and window management, improving productivity.
+Questo comando carica il "scripting-addition" di Yabai, necessario per gestire gli spazi dinamici. Per maggiori informazioni su come disattivare il SIP in maniera sicura, consulta la documentazione ufficiale.
 
 ---
 
-## Technical Details
+## Contributi
 
-### Dynamic Monitor Configuration
-
-A script is included to dynamically manage **yabai** and **sketchybar** configurations based on connected monitors. The script detects the active monitor ID and applies specific settings for the internal monitor (ID 1) and external monitors.
-
-#### Features
-- **Internal Monitor (ID 1):**
-  - `yabai -m config external_bar all:0:0`
-  - Optimized for use without an external bar.
-- **External Monitor (Other IDs):**
-  - `yabai -m config external_bar all:15:0`
-  - Configured with an external bar visible.
-
-#### Script Location
-The file `bar_toggle.sh` is located in `~/.config/skhd/` and can be executed manually or via a shortcut configured with **skhd**.
-
-#### Shortcut Example
-In the file `~/.skhdrc`, the following keybinding is set to execute the script:
-```bash
-alt - q : ~/.config/skhd/bar_toggle.sh
-```
-
-#### Automation with `launchd`
-To automate script execution when monitor states change:
-1. Create a configuration file `com.user.dynamic_monitor.plist` in `~/Library/LaunchAgents`.
-2. Load the service with:
-   ```bash
-   launchctl load ~/Library/LaunchAgents/com.user.dynamic_monitor.plist
-   ```
-
-#### Limitations
-- **yabai** does not natively support monitor-specific configurations. The script dynamically applies settings each time it is executed.
-- The script must be re-run whenever monitor states change.
-
-#### Logs
-Script outputs can be monitored through log files:
-- **Standard Log:** `/tmp/dynamic_monitor.log`
-- **Error Log:** `/tmp/dynamic_monitor_error.log`
-
-### Contribution
-If you have ideas to improve monitor configuration management or further automate processes, feel free to open a pull request or an issue.
+Se hai suggerimenti o miglioramenti, sentiti libero di aprire una pull request o creare un'issue.
 
 ---
 
-## Configuration of Yabai and SketchyBar
-
-This section details the configuration of **Yabai** and **SketchyBar** to optimize window and layout management on macOS.
-
-### Configured Actions
-
-#### General Settings
-- **Services:** Wait for services to be ready with `yabai --wait-for-services`.
-- **Menu bar:** Completely hide macOS menu bar using:
-  ```bash
-  sketchybar --bar topmost=on
-  yabai -m config menubar_opacity 0.0
-  ```
-
-#### Window Layout and Placement
-- **Default Layout:** Set to `bsp` (Binary Space Partitioning).
-  ```bash
-  yabai -m config layout bsp
-  ```
-- **Window Placement:** New windows are positioned:
-  - To the right if split is vertical.
-  - Below if split is horizontal.
-  ```bash
-  yabai -m config window_placement second_child
-  ```
-
-#### Padding and Gap
-| Configuration      | Value |
-|---------------------|-------|
-| Top padding         | 8     |
-| Bottom padding      | 8     |
-| Left padding        | 8     |
-| Right padding       | 8     |
-| Window gap          | 8     |
-
-Commands:
-```bash
-yabai -m config top_padding 8
-yabai -m config bottom_padding 8
-yabai -m config left_padding 8
-yabai -m config right_padding 8
-yabai -m config window_gap 8
-```
-
-#### Mouse Behavior
-| Configuration               | Value        |
-|------------------------------|--------------|
-| Mouse follows focus         | `on`         |
-| Mouse modifier              | `alt`        |
-| Primary mouse action        | `move`       |
-| Secondary mouse action      | `resize`     |
-| Window drop action          | `swap`       |
-
-Commands:
-```bash
-yabai -m config mouse_follows_focus on
-yabai -m config mouse_modifier alt
-yabai -m config mouse_action1 move
-yabai -m config mouse_action2 resize
-yabai -m mouse_drop_action swap
-yabai -m config focus_follows_mouse autofocus
-```
-
-#### Window Borders
-| Configuration                  | Value          |
-|--------------------------------|----------------|
-| Border width                   | `2`            |
-| Active window border color     | `0xff5ac8fa`   |
-| Normal window border color     | `0xff3c3c3c`   |
-
-Commands:
-```bash
-yabai -m config border_width 2
-yabai -m config active_window_border_color 0xff5ac8fa
-yabai -m config normal_window_border_color 0xff3c3c3c
-```
-
-#### Application Rules
-Certain applications are configured to float (not managed):
-| Application          | Action       |
-|-----------------------|--------------|
-| System Settings       | Not managed |
-| Calculator            | Not managed |
-| Karabiner-Elements    | Not managed |
-
-Commands:
-```bash
-yabai -m rule --add app="^System Settings$" manage=off
-yabai -m rule --add app="^Calculator$" manage=off
-yabai -m rule --add app="^Karabiner-Elements$" manage=off
-```
-
-#### Space-Specific Layouts
-Each space is configured to use the `bsp` layout:
-| Space | Layout |
-|-------|--------|
-| 1     | `bsp`  |
-| 2     | `bsp`  |
-| 3     | `bsp`  |
-| 4     | `bsp`  |
-| ...   | `bsp`  |
-
-Commands:
-```bash
-yabai -m config space 1 layout bsp
-yabai -m config space 2 layout bsp
-...
-yabai -m config space 10 layout bsp
-```
-
-#### Multi-Display Configurations (Optional)
-For multiple displays, assign spaces to the second display:
-```bash
-sleep 2
-yabai -m space 4 --display 2
-yabai -m space 5 --display 2
-```
-
-### Contribution
-If you have suggestions to improve or further optimize configurations for **Yabai** and **SketchyBar**, feel free to open a pull request or an issue.
+Grazie per aver esplorato questa repository! Spero che le configurazioni ti aiutino a migliorare il tuo workflow su macOS.
