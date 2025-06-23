@@ -39,15 +39,15 @@ Questa repository è progettata per migliorare il workflow su macOS, fornendo st
 
 ### MacOS Rice
 
-![macOS_Rice](https://github.com/user-attachments/assets/33741052-ad90-4385-9514-1e3497baf98a)
+![macOS_Rice](https://github.com/user-attachments/assets/72d139b1-0179-4dcc-8736-9d33ebd8c622)
 
 ### Sketchybar
 
-![sketchybar](https://github.com/user-attachments/assets/51076301-b189-4e0b-b32a-f58413b8487b)
+![sketchybar](https://github.com/user-attachments/assets/f054391d-2643-42ec-a12b-1b1157595996)
 
 ### Video Demo
 
-https://github.com/user-attachments/assets/9c709c4b-daed-48f0-a0d6-f50f9bebb471
+https://github.com/user-attachments/assets/d8c787b9-6414-4970-aa93-6534a6971582
 
 ---
 
